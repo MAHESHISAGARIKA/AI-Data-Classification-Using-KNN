@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Iris Classification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="main-container">
+
+        <div class="hero-section">
+            <h1>AI Data Classification Using KNN</h1>
+            <p>
+                A supervised machine learning project that classifies Iris flower species
+                using the K-Nearest Neighbors algorithm.
+            </p>
+        </div>
+
+        <div class="content-grid">
+
+            <div class="form-card">
+                <h2>Enter Flower Measurements</h2>
+
+                <form method="POST">
+
+                    <label>Sepal Length (cm)</label>
+                    <input 
+                        type="number" 
+                        step="0.1" 
+                        name="sepal_length" 
+                        placeholder="Example: 5.1"
+                        value="{{ input_values.sepal_length }}"
+                        required
+                    >
+
+                    <label>Sepal Width (cm)</label>
+                    <input 
+                        type="number" 
+                        step="0.1" 
+                        name="sepal_width" 
+                        placeholder="Example: 3.5"
+                        value="{{ input_values.sepal_width }}"
+                        required
+                    >
+
+                    <label>Petal Length (cm)</label>
+                    <input 
+                        type="number" 
+                        step="0.1" 
+                        name="petal_length" 
+                        placeholder="Example: 1.4"
+                        value="{{ input_values.petal_length }}"
+                        required
+                    >
+
+                    <label>Petal Width (cm)</label>
+                    <input 
+                        type="number" 
+                        step="0.1" 
+                        name="petal_width" 
+                        placeholder="Example: 0.2"
+                        value="{{ input_values.petal_width }}"
+                        required
+                    >
+
+                    <button type="submit">Predict Species</button>
+                </form>
+            </div>
+
+            <div class="result-card">
+                <h2>Prediction Result</h2>
+
+                {% if prediction %}
+                    <div class="prediction-box">
+                        <p>Predicted Iris Species</p>
+                        <h3>{{ prediction }}</h3>
+                    </div>
+                {% else %}
+                    <div class="empty-box">
+                        <p>Prediction will appear here after entering measurements.</p>
+                    </div>
+                {% endif %}
+
+                {% if error %}
+                    <div class="error-box">
+                        {{ error }}
+                    </div>
+                {% endif %}
+
+                <div class="info-box">
+                    <h3>Model Information</h3>
+                    <p><strong>Dataset:</strong> Iris Dataset</p>
+                    <p><strong>Algorithm:</strong> K-Nearest Neighbors</p>
+                    <p><strong>K Value:</strong> 5</p>
+
+                    {% if accuracy %}
+                        <p><strong>Model Accuracy:</strong> {{ "%.2f"|format(accuracy * 100) }}%</p>
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sample-section">
+            <h2>Sample Test Values</h2>
+
+            <div class="sample-grid">
+                <div class="sample-card">
+                    <h3>Setosa</h3>
+                    <p>5.1, 3.5, 1.4, 0.2</p>
+                </div>
+
+                <div class="sample-card">
+                    <h3>Versicolor</h3>
+                    <p>6.0, 2.9, 4.5, 1.5</p>
+                </div>
+
+                <div class="sample-card">
+                    <h3>Virginica</h3>
+                    <p>6.5, 3.0, 5.8, 2.2</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Developed as part of DecodeLabs Artificial Intelligence Internship - Project 2</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
