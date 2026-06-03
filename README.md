@@ -6,9 +6,9 @@ This project is a supervised machine learning classification system developed as
 
 The system uses the Iris dataset and applies the K-Nearest Neighbors algorithm to classify Iris flowers into three species:
 
-- Setosa
-- Versicolor
-- Virginica
+* Setosa
+* Versicolor
+* Virginica
 
 The project includes data preprocessing, feature scaling, model training, model evaluation, and a Flask-based web interface for real-time prediction.
 
@@ -18,25 +18,25 @@ The main objective of this project is to build a basic AI classification model u
 
 ## Features
 
-- Load and analyze the Iris dataset
-- Split data into training and testing sets
-- Apply feature scaling using StandardScaler
-- Train a K-Nearest Neighbors classifier
-- Evaluate the model using accuracy, confusion matrix, precision, recall, and F1 score
-- Save the trained model using Joblib
-- Provide a Flask web interface for predictions
-- Display prediction results clearly
+* Load and analyze the Iris dataset
+* Split data into training and testing sets
+* Apply feature scaling using StandardScaler
+* Train a K-Nearest Neighbors classifier
+* Evaluate the model using accuracy, confusion matrix, precision, recall, and F1 score
+* Save the trained model using Joblib
+* Provide a Flask web interface for predictions
+* Display prediction results clearly
 
 ## Technologies Used
 
-- Python
-- Flask
-- Scikit-learn
-- Pandas
-- NumPy
-- Matplotlib
-- HTML
-- CSS
+* Python
+* Flask
+* Scikit-learn
+* Pandas
+* NumPy
+* Matplotlib
+* HTML
+* CSS
 
 ## Machine Learning Algorithm
 
@@ -50,16 +50,16 @@ In this project, K = 5 is used.
 
 The Iris dataset contains 150 flower samples with 4 features:
 
-- Sepal length
-- Sepal width
-- Petal length
-- Petal width
+* Sepal Length
+* Sepal Width
+* Petal Length
+* Petal Width
 
 Target classes:
 
-- Setosa
-- Versicolor
-- Virginica
+* Setosa
+* Versicolor
+* Virginica
 
 ## Project Structure
 
@@ -86,3 +86,27 @@ AI-Data-Classification-Using-KNN/
 │   └── index.html
 │
 └── screenshots/
+```
+
+## How to Run
+
+Clone the repository, install dependencies, train the model, and run the Flask app.
+
+```bash
+git clone https://github.com/MAHESHISAGARIKA/AI-Data-Classification-Using-KNN.git
+cd AI-Data-Classification-Using-KNN
+
+python -m venv venv
+venv\Scripts\activate
+
+pip install -r requirements.txt
+python train_model.py
+python app.py
+```
+
+Open the application in the browser:
+
+```text
+http://127.0.0.1:5000
+```
+
