@@ -93,7 +93,7 @@ AI-Data-Classification-Using-KNN/
 Clone the repository, install dependencies, train the model, and run the Flask app.
 
 ```bash
-git clone https://github.com/MAHESHISAGARIKA/Task-2-MaheshiRajapaksha.git
+git clone https://github.com/MAHESHISAGARIKA/AI-Data-Classification-Using-KNN.git
 cd AI-Data-Classification-Using-KNN
 
 python -m venv venv
